@@ -1,0 +1,10 @@
+[
+  { "keys": ["super+shift+s"], "command": "reveal_in_side_bar"},
+  // { "keys": ["option+k, option+l"], "command": "copy_rspec" },
+  // { "keys": ["option+shift+k, option+shift+l"], "command": "copy_rspec_with_line" }
+
+  // { "keys": ["ctrl+k"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete to Hard EOL.sublime-macro"} },
+  // { "keys": ["ctrl+shift+k"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+  // { "keys": ["ctrl+d"], "command": "run_macro_file", "args": {"file": "res://Packages/Default/Delete Line.sublime-macro"} },
+  // { "keys": ["super+shift+k"], "command": "copy_rspec_with_line" }
+]

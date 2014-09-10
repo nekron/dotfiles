@@ -1,0 +1,24 @@
+{
+	"installed_packages":
+	[
+		"Better CoffeeScript",
+		"Color Schemes by carlcalderon",
+		"DashDoc",
+		"Elixir",
+		"Git",
+		"GitGutter",
+		"Grails",
+		"NSIS",
+		"RSpec (snippets and syntax)",
+		"Ruby Debugger",
+		"SideBarEnhancements",
+		"sublime-crystal",
+		"Swift",
+		"Theme - Soda",
+		"TidyTabs"
+	],
+	"repositories":
+	[
+		"https://github.com/manastech/sublime-crystal"
+	]
+}

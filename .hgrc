@@ -1,0 +1,36 @@
+[ui]
+username = nekron
+editor = mate
+
+[hostfingerprints]
+bitbucket.org = 24:9c:45:8b:9c:aa:ba:55:4e:01:6d:58:ff:e4:28:7d:2a:14:ae:3b
+
+[auth]
+bitbucket.prefix = bitbucket.org
+bitbucket.username = nekron
+bitbucket.schemes = http https
+
+[extensions]
+rebase =
+color =
+mq =
+mercurial_keyring =
+extdiff =
+purge =
+ftp = /Users/nekron/Projects/hgftp/ftp.py
+hgext.hbisect=
+
+[extdiff]
+cmd.vdiff = p4merge
+
+[merge-tools]
+p4merge.priority = 100
+p4merge.args = $base $local $other $output
+p4merge =
+
+[web]
+push_ssl=false
+allow_push=*
+
+[paths]
+dacnis = ftp://nekron@dacnis.com.ar/www/

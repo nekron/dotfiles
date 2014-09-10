@@ -1,0 +1,30 @@
+[user]
+  name = Mariano Abel Coca
+  email = marianoabelcoca@gmail.com
+[core]
+  excludesfile = /Users/nekron/.gitignore_global
+[merge]
+  tool = extMerge
+[alias]
+  st = status
+  ci = commit
+  co = checkout
+[push]
+  default = simple
+[color]
+  ui = true
+[mergetool]
+  trustExitCode = false
+# [diff]
+#   external = extDiff
+[mergetool "extMerge"]
+  cmd = extMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+[difftool "sourcetree"]
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = p4merge $BASE $LOCAL $REMOTE $MERGED
+	trustExitCode = true
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f

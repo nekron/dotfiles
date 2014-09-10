@@ -1,0 +1,8 @@
+syntax: glob
+
+*~
+.DS_Store
+proj.ios/Fruits.xcodeproj/project.xcworkspace/xcuserdata/nekron.xcuserdatad
+*.pbxproj
+db/openid-store
+*.swp
