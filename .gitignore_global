@@ -1,5 +1,5 @@
 *~
 .DS_Store
-proj.ios/Fruits.xcodeproj/project.xcworkspace/xcuserdata/nekron.xcuserdatad
+*.xcuserdatad
 db/openid-store
 *.swp
