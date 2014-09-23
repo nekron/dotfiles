@@ -124,7 +124,7 @@ set cursorline
 let g:ctrlp_max_height = 20
 
 " Shortcuts
-"let mapleader = ","
+let mapleader = ","
 "let maplocalleader = "\\"
 nmap <silent> <leader>h :silent :nohlsearch<CR>
 nmap <silent> <leader>s :set nolist!<CR>
