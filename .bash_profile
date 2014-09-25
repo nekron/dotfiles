@@ -64,5 +64,5 @@ eval "$(rbenv init -)"
 bind "\C-t":forward-search-history
 
 # exenv
-export PATH="$HOME/.exenv/bin:$PATH"
-eval "$(exenv init -)"
+# export PATH="$HOME/.exenv/bin:$PATH"
+# eval "$(exenv init -)"
