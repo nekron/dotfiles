@@ -39,6 +39,7 @@ fi
 
 # some more ls aliases
 alias ll='ls -alF'
+alias lf='ls -lF'
 alias la='ls -AF'
 alias l='ls -CF'
 alias s='rails s'
