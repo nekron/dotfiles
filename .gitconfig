@@ -6,22 +6,31 @@
 [merge]
   tool = extMerge
 [alias]
-  st = status
-  ci = commit
   co = checkout
+  ci = commit
+  st = status
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  f = fetch
+  diffs = diff --staged
+  logr = log --reverse
+  diff2 = difftool -t opendiff -y
 [push]
   default = simple
 [color]
+  diff = auto
+  status = auto
+  branch = auto
+  interactive = auto
   ui = true
+  pager = true
 [mergetool]
   trustExitCode = false
-# [diff]
-#   external = extDiff
 [mergetool "extMerge"]
   cmd = extMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
