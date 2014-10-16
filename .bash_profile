@@ -50,6 +50,7 @@ alias redis='redis-server /usr/local/etc/redis.conf'
 alias py_s='python -m SimpleHTTPServer 8000'
 alias ruby_s='ruby -run -e httpd . -p 5000'
 alias postgres='postgres -D /usr/local/var/postgres'
+alias asterisk='/usr/local/asterisk/sbin/asterisk -c'
 alias die='pkill -9 -fi'
 
 # Reverse search with arrows
