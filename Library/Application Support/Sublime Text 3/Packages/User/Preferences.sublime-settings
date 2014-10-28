@@ -70,7 +70,7 @@
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-	"Vintage"
+		"Vintage"
 	],
 	"index_exclude_patterns":
 	[
@@ -82,6 +82,5 @@
 	"theme": "Soda Light.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	// "vintage_start_in_command_mode": true,
 	"word_wrap": true
 }
