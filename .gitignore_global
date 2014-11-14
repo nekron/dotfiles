@@ -3,3 +3,5 @@
 *.xcuserdatad
 db/openid-store
 *.swp
+.rebar
+log

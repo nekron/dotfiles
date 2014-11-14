@@ -1,8 +1,8 @@
 [user]
-  name = Mariano Abel Coca
-  email = marianoabelcoca@gmail.com
+	name = Mariano Abel Coca
+	email = marianoabelcoca@gmail.com
 [core]
-  excludesfile = /Users/nekron/.gitignore_global
+	excludesfile = /Users/nekron/.gitignore_global
 [merge]
   tool = extMerge
 [alias]

@@ -5,3 +5,5 @@ syntax: glob
 *.pbxproj
 db/openid-store
 *.swp
+.rebar
+log
