@@ -1,5 +1,5 @@
 <snippet>
   <content>binding.pry</content>
-  <tabTrigger>bin</tabTrigger>
+  <tabTrigger>bind</tabTrigger>
   <scope>source.ruby</scope>
 </snippet>
