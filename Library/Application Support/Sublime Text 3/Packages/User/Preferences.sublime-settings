@@ -55,6 +55,7 @@
 		".hg",
 		"CVS",
 		"log",
+		".bundle",
 		"dist",
 		"tmp",
 		"bower_components",
