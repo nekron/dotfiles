@@ -69,3 +69,5 @@ bind "\C-t":forward-search-history
 # exenv
 # export PATH="$HOME/.exenv/bin:$PATH"
 # eval "$(exenv init -)"
+
+`boot2docker shellinit`
