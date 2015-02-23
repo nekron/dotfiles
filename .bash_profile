@@ -9,6 +9,7 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export HISTCONTROL=ignoredups
 export HISTSIZE=5000
+# export PRY_PEEK=INT   # peek on SIGINT (<ctrl+c>)
 
 function git_branch {
   git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(git:\1)/'
@@ -58,7 +59,6 @@ alias die='pkill -9 -fi'
 # bind '"\e[B":history-search-forward'
 
 eval "$(rbenv init -)"
-
 
 # Forward reverse search using ctr+s (this disables ctrl+s as a way to freeze the terminal output)
 # stty -ixon
