@@ -57,7 +57,8 @@
 		"CVS",
 		"log",
 		// ".bundle",
-		"dist",
+		// "dist",
+		"target",
 		"tmp",
 		"bower_components",
 		"node_modules",
@@ -67,7 +68,7 @@
 		".eunit",
 		"_build"
 	],
-	"font_size": 17,
+	"font_size": 20,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
