@@ -10,7 +10,6 @@ export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export HISTCONTROL=ignoredups
 export HISTSIZE=5000
-export JAVA_HOME=$(/usr/libexec/java_home)
 # export PRY_PEEK=INT   # peek on SIGINT (<ctrl+c>)
 
 function git_branch {
@@ -26,8 +25,8 @@ function hg_branch {
   fi
 }
 
-# export PS1='\[\e[0;35m\]\u@\h \[\e[0;31m\]\w\[\e[0;34m\]$(git_branch)\[\e[0;00m\]:\[\e[0m\] '
-export PS1='\[\e[0;35m\]\u@\h \[\e[0;31m\]\w\[\e[0;34m\]$(hg_branch)$(git_branch)\[\e[0;00m\]:\[\e[0m\] '
+export PS1='\[\e[0;35m\]\u@\h \[\e[0;31m\]\w\[\e[0;34m\]$(git_branch)\[\e[0;00m\]:\[\e[0m\] '
+# export PS1='\[\e[0;35m\]\u@\h \[\e[0;31m\]\w\[\e[0;34m\]$(hg_branch)$(git_branch)\[\e[0;00m\]:\[\e[0m\] '
 # http://askubuntu.com/questions/16728/hide-current-working-directory-in-terminal
 
 # enable color support of ls and also add handy aliases
@@ -72,4 +71,21 @@ bind "\C-t":forward-search-history
 # export PATH="$HOME/.exenv/bin:$PATH"
 # eval "$(exenv init -)"
 
-`boot2docker shellinit`
+# `boot2docker shellinit`
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+# JDK switch
+function setjdk() {
+  if [ $# -ne 0 ]; then
+   removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'
+   if [ -n "${JAVA_HOME+x}" ]; then
+    removeFromPath $JAVA_HOME
+   fi
+   export JAVA_HOME=`/usr/libexec/java_home -v $@`
+   export PATH=$JAVA_HOME/bin:$PATH
+  fi
+ }
+ function removeFromPath() {
+  export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
+ }
+setjdk 1.7.0_51
