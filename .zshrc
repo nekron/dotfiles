@@ -52,6 +52,16 @@ plugins=(git)
 export PATH="/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/bin:/Users/nekron/.rbenv/shims:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:/usr/local/Cellar/nimrod/0.9.2/libexec/bin:/Users/nekron/Projects/fruits/moai-sdk-1.4p0/bin/osx:.mame"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+export PATH=$PATH:/usr/local/share/npm/bin #node.js
+export PATH=$PATH:/usr/local/Cellar/nimrod/0.9.2/libexec/bin #nimrod
+export PATH=$PATH:/Users/nekron/Projects/fruits/moai-sdk-1.4p0/bin/osx #moai
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+export PATH=$PATH:.mame
+export MANPATH=/usr/local/opt/erlang/lib/erlang/man:$MANPATH
+export EDITOR=mate
+export BUNDLER_EDITOR=subl
+# export PRY_PEEK=INT   # peek on SIGINT (<ctrl+c>)
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
@@ -82,3 +92,37 @@ source $ZSH/oh-my-zsh.sh
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
 alias j=autojump
+
+alias ll='ls -alF'
+alias lo='ls -alFO'
+alias lf='ls -lF'
+alias la='ls -AF'
+alias l='ls -CF'
+alias s='rails s'
+alias c='rails c'
+alias elastic='elasticsearch -D es.config=/usr/local/opt/elasticsearch/config/elasticsearch.yml'
+alias redis='redis-server /usr/local/etc/redis.conf'
+alias py_s='python -m SimpleHTTPServer 8000'
+alias ruby_s='ruby -run -e httpd . -p 5000'
+alias postgres='postgres -D /usr/local/var/postgres'
+alias asterisk='/usr/local/asterisk/sbin/asterisk -c'
+alias die='pkill -9 -fi'
+
+eval "$(rbenv init -)"
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+# JDK switch
+function setjdk() {
+  if [ $# -ne 0 ]; then
+   removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'
+   if [ -n "${JAVA_HOME+x}" ]; then
+    removeFromPath $JAVA_HOME
+   fi
+   export JAVA_HOME=`/usr/libexec/java_home -v $@`
+   export PATH=$JAVA_HOME/bin:$PATH
+  fi
+ }
+ function removeFromPath() {
+  export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
+ }
+setjdk 1.8
