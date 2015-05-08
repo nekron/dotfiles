@@ -91,8 +91,6 @@ source $ZSH/oh-my-zsh.sh
 
 [[ -s $(brew --prefix)/etc/profile.d/autojump.sh ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-alias j=autojump
-
 alias ll='ls -alF'
 alias lo='ls -alFO'
 alias lf='ls -lF'
