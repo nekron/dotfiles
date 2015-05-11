@@ -4,6 +4,9 @@ Pry.commands.alias_command 'n', 'next'
 Pry.commands.alias_command 'f', 'finish'
 Pry.commands.alias_command 'w', 'whereami'
 Pry.commands.alias_command 'e', 'edit'
+Pry.commands.alias_command 'ec', 'edit -c'
+Pry.commands.alias_command 'ee', 'edit -e'
+Pry.commands.alias_command 'a', 'try-again'
 
 # Signal.trap("INT") do
 #   puts
@@ -20,7 +23,7 @@ rescue LoadError => e
 end
 
 
-Pry.config.editor = 'mvim'
+Pry.config.editor = 'mate'
 
 require 'active_support/inflector'
 
