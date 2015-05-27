@@ -16,7 +16,7 @@
   logr = log --reverse
   diff2 = difftool -t opendiff -y
 [push]
-  default = simple
+  default = tracking
 [color]
   diff = auto
   status = auto
