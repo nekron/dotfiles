@@ -1,51 +1,65 @@
+
+    let vundle_readme=expand('~/.vim/bundle/vundle/README.md')
+    if !filereadable(vundle_readme)
+        echo "Installing Vundle.."
+        echo ""
+        silent !mkdir -p ~/.vim/bundle
+        silent !git clone https://github.com/gmarik/vundle ~/.vim/bundle/vundle
+        let iCanHazVundle=0
+      else
+        let iCanHazVundle=1
+    endif
+    set rtp+=~/.vim/bundle/vundle/
+    call vundle#rc()
+    Bundle 'gmarik/vundle'
+    "Add your bundles here
+    "Bundle 'Syntastic'
+    " Navigation
+    Bundle 'scrooloose/nerdtree'
+    Bundle 'kien/ctrlp.vim'
+
+    " Color themes
+    Bundle 'chriskempson/vim-tomorrow-theme'
+    Bundle 'Zenburn'
+    Bundle 'chriskempson/base16-vim'
+    Bundle 'flazz/vim-colorschemes'
+    Bundle 'noahfrederick/vim-hemisu'
+    Bundle 'altercation/vim-colors-solarized'
+
+    " Language support
+    Bundle 'tpope/vim-bundler'
+    "Bundle 'guns/vim-clojure-static'
+    Bundle 'kchmck/vim-coffee-script'
+    "Bundle 'rhysd/vim-crystal'
+    "Bundle 'tpope/vim-fireplace'
+    Bundle 'pangloss/vim-javascript'
+    "Bundle 'mxw/vim-jsx'
+    Bundle 'groenewege/vim-less'
+    Bundle 'tpope/vim-markdown'
+    Bundle 'tpope/vim-rails'
+    Bundle 'vim-ruby/vim-ruby'
+    Bundle 'jimenezrick/vimerl'
+
+    " Git
+    Bundle 'tpope/vim-fugitive'
+    Bundle 'airblade/vim-gitgutter'
+
+    " Editing
+    Bundle 'scrooloose/NERDCommenter'
+    Bundle 'tpope/vim-surround'
+    Bundle 'AndrewRadev/splitjoin.vim'
+    Bundle 'rking/ag.vim'
+    "...All your other bundles...
+    if iCanHazVundle == 0
+        echo "Installing Bundles, please ignore key map error messages"
+        echo ""
+        :BundleInstall
+    endif
+" Setting up Vundle - the vim plugin bundler end
+
 set nocompatible
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" Navigation
-Plugin 'scrooloose/nerdtree'
-Plugin 'kien/ctrlp.vim'
-
-" Color themes
-Plugin 'chriskempson/vim-tomorrow-theme'
-Plugin 'Zenburn'
-Plugin 'chriskempson/base16-vim'
-Plugin 'flazz/vim-colorschemes'
-Plugin 'noahfrederick/vim-hemisu'
-Plugin 'altercation/vim-colors-solarized'
-
-" Language support
-Plugin 'tpope/vim-bundler'
-"Plugin 'guns/vim-clojure-static'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'rhysd/vim-crystal'
-"Plugin 'tpope/vim-fireplace'
-Plugin 'pangloss/vim-javascript'
-"Plugin 'mxw/vim-jsx'
-Plugin 'groenewege/vim-less'
-Plugin 'tpope/vim-markdown'
-Plugin 'tpope/vim-rails'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'jimenezrick/vimerl'
-
-
-" Git
-Plugin 'tpope/vim-fugitive'
-Plugin 'airblade/vim-gitgutter'
-
-" Editing
-Plugin 'scrooloose/NERDCommenter'
-Plugin 'tpope/vim-surround'
-Plugin 'AndrewRadev/splitjoin.vim'
-Plugin 'rking/ag.vim'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -114,10 +128,10 @@ set background=light
 "set background=dark
 "colorscheme base16-tomorrow
 "colorscheme zenburn
-colorscheme solarized
+"colorscheme solarized
 "colorscheme mac_classic
 "colorscheme dawn
-"colorscheme Tomorrow-Night-Eighties
+colorscheme Tomorrow-Night-Eighties
 set cursorline
 
 " Ctrl-P
@@ -136,6 +150,7 @@ nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>r :CtrlPMRU<CR>
 
 nmap <leader>n :NERDTreeToggle<CR>
+filetype plugin on
 
 "nmap <leader>( :RainbowParenthesesToggleAll<CR>
 
