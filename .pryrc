@@ -23,7 +23,7 @@ rescue LoadError => e
 end
 
 
-Pry.config.editor = 'mate'
+Pry.config.editor = 'vim'
 
 require 'active_support/inflector'
 

@@ -129,9 +129,9 @@ set background=light
 "colorscheme base16-tomorrow
 "colorscheme zenburn
 "colorscheme solarized
-"colorscheme mac_classic
+colorscheme mac_classic
 "colorscheme dawn
-colorscheme Tomorrow-Night-Eighties
+"colorscheme Tomorrow-Night-Eighties
 set cursorline
 
 " Ctrl-P
