@@ -20,7 +20,7 @@
 	],
 	"bold_folder_labels": true,
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/Color Scheme - Default/Dawn.tmTheme",
+	"color_scheme": "Packages/Color Scheme - JustBeforeDawn/JustBeforeDawn.tmTheme",
 	"create_window_at_startup": false,
 	"detect_indentation": false,
 	"enable_tab_scrolling": false,
@@ -52,6 +52,7 @@
 	"folder_exclude_patterns":
 	[
 		".svn",
+		".bundle",
 		".git",
 		".hg",
 		"CVS",
@@ -65,12 +66,12 @@
 		".eunit",
 		"_build"
 	],
-	"font_size": 17,
+	"font_size": 20,
 	"highlight_line": true,
 	"highlight_modified_tabs": true,
 	"ignored_packages":
 	[
-		"Vintage"
+		"Vintageous"
 	],
 	"indent_guide_options":
 	[

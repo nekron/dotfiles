@@ -119,17 +119,18 @@ if has("gui_running")
     "set columns=203
     set lines=79
     set columns=269
+    set guifont=Monaco:h14
     let rdark_current_line = 1
     set guioptions-=T
     set guioptions-=m
 endif
 
-set background=light
-"set background=dark
+"set background=light
+set background=dark
 "colorscheme base16-tomorrow
 "colorscheme zenburn
-"colorscheme solarized
-colorscheme mac_classic
+colorscheme solarized
+"colorscheme mac_classic
 "colorscheme dawn
 "colorscheme Tomorrow-Night-Eighties
 set cursorline
