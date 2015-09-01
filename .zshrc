@@ -106,7 +106,7 @@ alias ruby_s='ruby -run -e httpd . -p 5000'
 alias postgres='postgres -D /usr/local/var/postgres'
 alias asterisk='/usr/local/asterisk/sbin/asterisk -c'
 alias die='pkill -9 -fi'
-alias rm='trash'
+#alias rm='trash'
 
 eval "$(rbenv init -)"
 
