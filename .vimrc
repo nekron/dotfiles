@@ -108,9 +108,7 @@ set scrolloff=3
 set ruler
 syntax on
 set number
-set listchars=tab:>-,trail:·,eol:¬
-"set list
-"set nolist
+set listchars=tab:>-,trail:·,eol:¬ "set nolist!
 set foldenable
 set foldmethod=manual
 set nolazyredraw
@@ -145,17 +143,21 @@ if has("gui_running")
   set background=dark
   "colorscheme zenburn
   "colorscheme atom-dark
-  colorscheme solarized
+  colorscheme Tomorrow-Night-Eighties
+  "colorscheme solarized
   "colorscheme mac_classic
   set cursorline
 else
   "set background=light
   set background=dark
-  colorscheme zenburn
-  "colorscheme solarized
+  "colorscheme zenburn
+  "colorscheme 256-grayvim
   "colorscheme mac_classic
-  "colorscheme atom-dark
-  "set cursorline
+  "colorscheme Tomorrow-Night
+  "colorscheme solarized
+  colorscheme Tomorrow-Night-Eighties
+  "colorscheme atom-dark-256
+  set cursorline
 endif
 
 " Ctrl-P
