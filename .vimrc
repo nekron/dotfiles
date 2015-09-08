@@ -18,11 +18,13 @@
     Plugin 'scrooloose/nerdtree'
     Plugin 'kien/ctrlp.vim'
     Plugin 'rking/ag.vim'
+    Plugin 'bling/vim-airline'
 
     " Color themes
     Plugin 'chriskempson/vim-tomorrow-theme'
     Plugin 'Zenburn'
     Plugin 'chriskempson/base16-vim'
+    Plugin 'tomasr/molokai'
     Plugin 'flazz/vim-colorschemes'
     Plugin 'gosukiwi/vim-atom-dark'
     Plugin 'noahfrederick/vim-hemisu'
@@ -45,10 +47,12 @@
     " Git
     Plugin 'tpope/vim-fugitive'
     Plugin 'airblade/vim-gitgutter'
+    Plugin 'Xuyuanp/nerdtree-git-plugin'
 
     " Editing
+    "Plugin 'vim-scripts/paredit.vim'
+    Plugin 'kien/rainbow_parentheses.vim'
     Plugin 'scrooloose/NERDCommenter'
-    Plugin 'Xuyuanp/nerdtree-git-plugin'
     Plugin 'tpope/vim-surround'
     Plugin 'AndrewRadev/splitjoin.vim'
 
@@ -139,26 +143,30 @@ if has("gui_running")
   let rdark_current_line = 1
   set guioptions-=T
   set guioptions-=m
-  "set background=light
-  set background=dark
   "colorscheme zenburn
   "colorscheme atom-dark
   colorscheme Tomorrow-Night-Eighties
+  "colorscheme Tomorrow-Night
   "colorscheme solarized
   "colorscheme mac_classic
-  set cursorline
-else
   "set background=light
   set background=dark
+  set cursorline
+else
   "colorscheme zenburn
   "colorscheme 256-grayvim
   "colorscheme mac_classic
   "colorscheme Tomorrow-Night
-  "colorscheme solarized
   colorscheme Tomorrow-Night-Eighties
   "colorscheme atom-dark-256
+  "set background=light
+  set background=dark
   set cursorline
 endif
+
+" Airline
+let g:airline#extensions#tabline#enabled = 1
+set laststatus=2
 
 " Ctrl-P
 let g:ctrlp_max_height = 20
@@ -178,6 +186,7 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 let g:ctrlp_show_hidden = 1
 
 nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>m :NERDTreeFind<CR>
 let NERDTreeShowHidden=1
 autocmd vimenter * NERDTree
 filetype plugin on
