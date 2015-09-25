@@ -162,6 +162,7 @@ else
   "set background=light
   set background=dark
   set cursorline
+  "let base16colorspace=256  " Access colors present in 256 colorspace
 endif
 
 " Airline
@@ -188,7 +189,7 @@ let g:ctrlp_show_hidden = 1
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>m :NERDTreeFind<CR>
 let NERDTreeShowHidden=1
-autocmd vimenter * NERDTree
+"autocmd vimenter * NERDTree
 filetype plugin on
 
 nmap <leader>( :RainbowParenthesesToggleAll<CR>
