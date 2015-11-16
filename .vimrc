@@ -37,7 +37,7 @@
     Plugin 'kchmck/vim-coffee-script'
     "Plugin 'tpope/vim-fireplace'
     Plugin 'pangloss/vim-javascript'
-    "Plugin 'mxw/vim-jsx'
+    Plugin 'mxw/vim-jsx'
     Plugin 'groenewege/vim-less'
     Plugin 'tpope/vim-markdown'
     Plugin 'tpope/vim-rails'
@@ -79,7 +79,6 @@
 
 set nocompatible
 filetype off                  " required
-
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -209,8 +208,6 @@ nmap <C-PageUp> :bprev<CR>
 nmap <C-PageDown> :bnext<CR>
 nmap <F3> :cn<CR>
 nmap <S-F3> :cp<CR>
-
-set number
 
 "e    to open file and close the quickfix window
 "o    to open (same as enter)

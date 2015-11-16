@@ -59,7 +59,7 @@ export PATH=$PATH:/Users/nekron/Projects/fruits/moai-sdk-1.4p0/bin/osx #moai
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$PATH:.mame
 export MANPATH=/usr/local/opt/erlang/lib/erlang/man:$MANPATH
-export EDITOR=mate
+export EDITOR=vim
 export BUNDLER_EDITOR=subl
 # export PRY_PEEK=INT   # peek on SIGINT (<ctrl+c>)
 
@@ -106,6 +106,7 @@ alias ruby_s='ruby -run -e httpd . -p 5000'
 alias postgres='postgres -D /usr/local/var/postgres'
 alias asterisk='/usr/local/asterisk/sbin/asterisk -c'
 alias die='pkill -9 -fi'
+alias pull='git pull && bundle install && rake db:migrate db:test:prepare'
 #alias rm='trash'
 
 eval "$(rbenv init -)"
