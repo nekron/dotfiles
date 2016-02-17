@@ -14,13 +14,13 @@
     Plugin 'VundleVim/Vundle.vim'
     "Add your bundles here
     "Plugin 'Syntastic'
-    " Navigation
+    "Navigation
     Plugin 'scrooloose/nerdtree'
     Plugin 'kien/ctrlp.vim'
     Plugin 'rking/ag.vim'
     Plugin 'bling/vim-airline'
 
-    " Color themes
+    "Color themes
     Plugin 'chriskempson/vim-tomorrow-theme'
     Plugin 'Zenburn'
     Plugin 'chriskempson/base16-vim'
@@ -30,7 +30,7 @@
     Plugin 'noahfrederick/vim-hemisu'
     Plugin 'altercation/vim-colors-solarized'
 
-    " Language support
+    "Language support
     Plugin 'rhysd/vim-crystal'
     Plugin 'tpope/vim-bundler'
     "Plugin 'guns/vim-clojure-static'
@@ -44,61 +44,62 @@
     Plugin 'vim-ruby/vim-ruby'
     Plugin 'jimenezrick/vimerl'
 
-    " Git
+    "Git
     Plugin 'tpope/vim-fugitive'
     Plugin 'airblade/vim-gitgutter'
     Plugin 'Xuyuanp/nerdtree-git-plugin'
 
-    " Editing
+    "Editing
     "Plugin 'vim-scripts/paredit.vim'
     Plugin 'kien/rainbow_parentheses.vim'
     Plugin 'scrooloose/NERDCommenter'
     Plugin 'tpope/vim-surround'
     Plugin 'AndrewRadev/splitjoin.vim'
+    Plugin 'matze/vim-move'
 
-    " All of your Plugins must be added before the following line
-    call vundle#end()            " required
-    filetype plugin indent on    " required
-    " To ignore plugin indent changes, instead use:
+    "All of your Plugins must be added before the following line
+    call vundle#end()            "required
+    filetype plugin indent on    "required
+    "To ignore plugin indent changes, instead use:
     "filetype plugin on
     "
-    " Brief help
-    " :PluginList       - lists configured plugins
-    " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-    " :PluginSearch foo - searches for foo; append `!` to refresh local cache
-    " :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+    "Brief help
+    ":PluginList       - lists configured plugins
+    ":PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+    ":PluginSearch foo - searches for foo; append `!` to refresh local cache
+    ":PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
     "
-    " see :h vundle for more details or wiki for FAQ
-    " Put your non-Plugin stuff after this line
+    "see :h vundle for more details or wiki for FAQ
+    "Put your non-Plugin stuff after this line
     if iCanHazVundle == 0
         echo "Installing Plugins, please ignore key map error messages"
         echo ""
         :PluginInstall
     endif
-" Setting up Vundle - the vim plugin bundler end
+"Setting up Vundle - the vim plugin bundler end
 
 set nocompatible
-filetype off                  " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
+filetype off                 "required
+filetype plugin indent on    "required
+"To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"Brief help
+":PluginList       - lists configured plugins
+":PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+":PluginSearch foo - searches for foo; append `!` to refresh local cache
+":PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
 "
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
+"see :h vundle for more details or wiki for FAQ
+"Put your non-Plugin stuff after this line
 
-" Search options
+"Search options
 set ignorecase
 set smartcase
 set incsearch
 set hlsearch
 
-" Editing options
+"Editing options
 set backspace=indent,eol,start
 set autoindent
 set expandtab
@@ -106,7 +107,7 @@ set shiftwidth=2
 set tabstop=2
 set sts=2
 
-" View options
+"View options
 set scrolloff=3
 set ruler
 syntax on
@@ -116,7 +117,7 @@ set foldenable
 set foldmethod=manual
 set nolazyredraw
 
-" Other options
+"Other options
 set hidden
 set history=1000
 runtime macros/matchit.vim
@@ -127,12 +128,12 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*.swp,*.class,*.pyc
 set wildignore+=*/build/*
 set autoread
 
-" Filetypes
+"Filetypes
 filetype on
 filetype plugin indent on
 au BufNewFile,BufRead [Cc]apfile set filetype=ruby
 
-" Appearence
+"Appearence
 if has("gui_running")
   "set lines=61
   "set columns=203
@@ -161,17 +162,29 @@ else
   "set background=light
   set background=dark
   set cursorline
-  "let base16colorspace=256  " Access colors present in 256 colorspace
+  "let base16colorspace=256  "Access colors present in 256 colorspace
 endif
 
-" Airline
+filetype plugin on
+
+"GitGutter
+let g:gitgutter_max_signs = 1000
+
+"Airline
 let g:airline#extensions#tabline#enabled = 1
 set laststatus=2
 
-" Ctrl-P
+"Ctrl-P
 let g:ctrlp_max_height = 20
+let g:ctrlp_match_window = 'results:100'
+let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_match_window = 'results:100'
 
-" Shortcuts
+" vim-move
+let g:move_key_modifier = 'C'
+
+"Shortcuts
 let mapleader = ","
 "let maplocalleader = "\\"
 nmap <silent> <leader>h :silent :nohlsearch<CR>
@@ -182,21 +195,28 @@ nmap <leader>f :CtrlPCurWD<CR>
 nmap <leader>F :CtrlPCurFile<CR>
 nmap <leader>b :CtrlPBuffer<CR>
 nmap <leader>r :CtrlPMRU<CR>
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
-let g:ctrlp_show_hidden = 1
 
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>m :NERDTreeFind<CR>
 let NERDTreeShowHidden=1
-"autocmd vimenter * NERDTree
-filetype plugin on
 
 nmap <leader>( :RainbowParenthesesToggleAll<CR>
 
-" edit .vimrc
+" switch to normal mode
+inoremap jk <esc>
+
+" Center search results
+nnoremap n nzz
+
+" Moving to beginning/end of line
+nnoremap H ^
+nnoremap L $
+
+"edit .vimrc
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
-" copy and paste from clipboard
+
+"copy and paste from clipboard
 vnoremap <leader>y "+y
 vnoremap <leader>d "+d
 nnoremap <leader>p "+p
@@ -220,3 +240,5 @@ nmap <S-F3> :cp<CR>
 "gv   to open in vertical split silently
 "q    to close the quickfix window
 
+set exrc
+set secure
