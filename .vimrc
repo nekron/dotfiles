@@ -1,4 +1,3 @@
-
     let vundle_readme=expand('~/.vim/bundle/Vundle.vim/README.md')
     if !filereadable(vundle_readme)
         echo "Installing Vundle.."
@@ -40,9 +39,10 @@
     Plugin 'mxw/vim-jsx'
     Plugin 'groenewege/vim-less'
     Plugin 'tpope/vim-markdown'
-    Plugin 'tpope/vim-rails'
     Plugin 'vim-ruby/vim-ruby'
     Plugin 'jimenezrick/vimerl'
+    Plugin 'tpope/vim-rails'
+    Plugin 'tpope/vim-rake'
 
     "Git
     Plugin 'tpope/vim-fugitive'
@@ -54,8 +54,10 @@
     Plugin 'kien/rainbow_parentheses.vim'
     Plugin 'scrooloose/NERDCommenter'
     Plugin 'tpope/vim-surround'
+    Plugin 'tpope/vim-unimpaired'
     Plugin 'AndrewRadev/splitjoin.vim'
     Plugin 'matze/vim-move'
+    Plugin 'FooSoft/vim-argwrap'
 
     "All of your Plugins must be added before the following line
     call vundle#end()            "required
@@ -202,11 +204,18 @@ let NERDTreeShowHidden=1
 
 nmap <leader>( :RainbowParenthesesToggleAll<CR>
 
+" vim-argwrap
+nnoremap <silent> <leader>a :ArgWrap<CR>
+
 " switch to normal mode
 inoremap jk <esc>
 
 " Center search results
 nnoremap n nzz
+nnoremap N Nzz
+
+" Highlights
+nnoremap * *#
 
 " Moving to beginning/end of line
 nnoremap H ^
