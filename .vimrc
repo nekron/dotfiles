@@ -118,6 +118,7 @@ set listchars=tab:>-,trail:·,eol:¬ "set nolist!
 set foldenable
 set foldmethod=manual
 set nolazyredraw
+set mouse=a
 
 "Other options
 set hidden
@@ -196,6 +197,7 @@ nmap <silent> <leader>w :set wrap!<CR>
 nmap <leader>f :CtrlPCurWD<CR>
 nmap <leader>F :CtrlPCurFile<CR>
 nmap <leader>b :CtrlPBuffer<CR>
+nmap <leader><TAB> <leader>b<CR>
 nmap <leader>r :CtrlPMRU<CR>
 
 nmap <leader>n :NERDTreeToggle<CR>
@@ -206,6 +208,7 @@ nmap <leader>( :RainbowParenthesesToggleAll<CR>
 
 " vim-argwrap
 nnoremap <silent> <leader>a :ArgWrap<CR>
+let g:argwrap_padded_braces = '{'
 
 " switch to normal mode
 inoremap jk <esc>
@@ -233,10 +236,26 @@ nnoremap <leader>p "+p
 vnoremap <leader>p "+p
 vnoremap <leader>p "+p
 
-nmap <C-PageUp> :bprev<CR>
-nmap <C-PageDown> :bnext<CR>
 nmap <F3> :cn<CR>
 nmap <S-F3> :cp<CR>
+
+"Split navigation
+nnoremap <s-j> <c-w>j
+nnoremap <s-k> <c-w>k
+nnoremap <s-h> <c-w>h
+nnoremap <s-l> <c-w>l
+
+"alternative mapping for joining lines
+nnoremap <leader>j <s-j>
+
+"Moving to beginning/end of line
+nnoremap <c-h> ^
+nnoremap <c-l> $
+
+nmap <c-left> :bprev<CR>
+nmap <c-right> :bnext<CR>
+
+nnoremap <leader>r <c-l>
 
 "e    to open file and close the quickfix window
 "o    to open (same as enter)

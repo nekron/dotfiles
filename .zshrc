@@ -52,7 +52,7 @@ plugins=(git)
 export PATH="/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/bin:/Users/nekron/.rbenv/shims:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:/usr/local/Cellar/nimrod/0.9.2/libexec/bin:/Users/nekron/Projects/fruits/moai-sdk-1.4p0/bin/osx:.mame"
 # export MANPATH="/usr/local/man:$MANPATH"
 
-
+export PATH=/usr/local/opt/vim/bin:$PATH
 export PATH=$PATH:/usr/local/share/npm/bin #node.js
 export PATH=$PATH:/usr/local/Cellar/nimrod/0.9.2/libexec/bin #nimrod
 export PATH=$PATH:/Users/nekron/Projects/fruits/moai-sdk-1.4p0/bin/osx #moai
