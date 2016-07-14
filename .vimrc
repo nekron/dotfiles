@@ -188,6 +188,7 @@ let g:ctrlp_match_window = 'results:100'
 let g:move_key_modifier = 'C'
 
 "Shortcuts
+let mapleader = "\<Space>"
 let mapleader = ","
 "let maplocalleader = "\\"
 nmap <silent> <leader>h :silent :nohlsearch<CR>
@@ -197,6 +198,7 @@ nmap <silent> <leader>w :set wrap!<CR>
 nmap <leader>f :CtrlPCurWD<CR>
 nmap <leader>F :CtrlPCurFile<CR>
 nmap <leader>b :CtrlPBuffer<CR>
+nnoremap <leader><leader> :CtrlPMRU<CR>
 nmap <leader><TAB> <leader>b<CR>
 nmap <leader>r :CtrlPMRU<CR>
 
