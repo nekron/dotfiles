@@ -59,7 +59,9 @@ alias die='pkill -9 -fi'
 # bind '"\e[A":history-search-backward'
 # bind '"\e[B":history-search-forward'
 
-eval "$(rbenv init -)"
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+chruby ruby-2.3.1
 
 # Forward reverse search using ctr+s (this disables ctrl+s as a way to freeze the terminal output)
 # stty -ixon

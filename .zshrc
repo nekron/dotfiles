@@ -49,7 +49,7 @@ plugins=(git)
 
 # User configuration
 
-export PATH="/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/bin:/Users/nekron/.rbenv/shims:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:/usr/local/Cellar/nimrod/0.9.2/libexec/bin:/Users/nekron/Projects/fruits/moai-sdk-1.4p0/bin/osx:.mame"
+export PATH="/Library/Java/JavaVirtualMachines/jdk1.8.0_40.jdk/Contents/Home/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/share/npm/bin:/usr/local/Cellar/nimrod/0.9.2/libexec/bin:/Users/nekron/Projects/fruits/moai-sdk-1.4p0/bin/osx:.mame"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 export PATH=/usr/local/opt/vim/bin:$PATH
@@ -97,8 +97,9 @@ alias lo='ls -alFO'
 alias lf='ls -lF'
 alias la='ls -AF'
 alias l='ls -CF'
-alias s='rails s'
-alias c='rails c'
+alias be='bundle exec'
+alias s='bundle exec rails s'
+alias c='bundle exec rails c'
 alias redis='redis-server /usr/local/etc/redis.conf'
 alias py_s='python -m SimpleHTTPServer 8000'
 alias ruby_s='ruby -run -e httpd . -p 5000'
@@ -108,7 +109,9 @@ alias die='pkill -9 -fi'
 alias pull='git pull && bundle install && rake db:migrate db:test:prepare'
 #alias rm='trash'
 
-eval "$(rbenv init -)"
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
+chruby ruby-2.3.1
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 # JDK switch
