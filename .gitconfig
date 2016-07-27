@@ -10,7 +10,8 @@
   ci = commit
   st = status
   br = branch
-  hist ="log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short"
+  hist ="log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short" ; --all para listar todos los branches
+  logg = "log --graph --oneline" ; --all para listar todos los branches
   f = fetch
   diffs = diff --staged
   logr = log --reverse
