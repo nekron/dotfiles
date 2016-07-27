@@ -189,8 +189,8 @@ let g:move_key_modifier = 'C'
 
 "Shortcuts
 let mapleader = "\<Space>"
-let mapleader = ","
-"let maplocalleader = "\\"
+"let mapleader = ","
+"let maplocalleader = ","
 nmap <silent> <leader>h :silent :nohlsearch<CR>
 nmap <silent> <leader>s :set nolist!<CR>
 nmap <silent> <leader>w :set wrap!<CR>
