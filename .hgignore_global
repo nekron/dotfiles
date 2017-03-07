@@ -7,3 +7,4 @@ db/openid-store
 *.swp
 .rebar
 log
+nekron.xcuserdatad

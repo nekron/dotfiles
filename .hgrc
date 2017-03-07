@@ -27,6 +27,15 @@ cmd.vdiff = p4merge
 p4merge.priority = 100
 p4merge.args = $base $local $other $output
 p4merge =
+meld.priority = 99
+meld.args = $base $local $other -o $output
+meld =
+diffuse.priority = 98
+diffuse.args = $base $local $other -o $output
+diffuse =
+subl.priority = 97
+subl.args = $base $local $other -o $output
+subl =
 
 [web]
 push_ssl=false
