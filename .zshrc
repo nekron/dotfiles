@@ -107,6 +107,7 @@ alias postgres='postgres -D /usr/local/var/postgres'
 alias asterisk='/usr/local/asterisk/sbin/asterisk -c'
 alias die='pkill -9 -fi'
 alias pull='git pull && bundle install && rake db:migrate db:test:prepare'
+alias git='hub'
 #alias rm='trash'
 
 source /usr/local/share/chruby/chruby.sh
@@ -129,3 +130,13 @@ function setjdk() {
   export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
  }
 setjdk 1.8
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f /Users/nekron/Downloads/google-cloud-sdk/path.zsh.inc ]; then
+  source '/Users/nekron/Downloads/google-cloud-sdk/path.zsh.inc'
+fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f /Users/nekron/Downloads/google-cloud-sdk/completion.zsh.inc ]; then
+  source '/Users/nekron/Downloads/google-cloud-sdk/completion.zsh.inc'
+fi

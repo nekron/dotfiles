@@ -30,6 +30,7 @@
     Plugin 'altercation/vim-colors-solarized'
 
     "Language support
+    Plugin 'elixir-lang/vim-elixir'
     Plugin 'rhysd/vim-crystal'
     Plugin 'tpope/vim-bundler'
     "Plugin 'guns/vim-clojure-static'
@@ -180,11 +181,15 @@ set laststatus=2
 "Ctrl-P
 let g:ctrlp_max_height = 20
 let g:ctrlp_match_window = 'results:100'
-let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
+let g:ctrlp_custom_ignore = '\v[\/](\.(git|hg|svn|bundle)|tmp)$'
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_match_window = 'results:100'
 
-" vim-move
+"eslint + flow
+"let g:syntastic_javascript_checkers = [ 'eslint', ‘flow’ ]
+"let g:syntastic_javascript_flow_exe = ‘flow’
+
+"vim-move
 let g:move_key_modifier = 'C'
 
 "Shortcuts
@@ -199,8 +204,8 @@ nmap <leader>f :CtrlPCurWD<CR>
 nmap <leader>F :CtrlPCurFile<CR>
 nmap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader><leader> :CtrlPMRU<CR>
+nmap <leader>, :CtrlPClearAllCaches<CR>
 nmap <leader><TAB> <leader>b<CR>
-nmap <leader>r :CtrlPMRU<CR>
 
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>m :NERDTreeFind<CR>
