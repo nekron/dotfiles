@@ -17,7 +17,7 @@
   logr = log --reverse
   diff2 = difftool -t opendiff -y
 [push]
-  default = tracking
+  default = simple
 [color]
   diff = auto
   status = auto
@@ -31,7 +31,7 @@
   cmd ="extMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\""
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true

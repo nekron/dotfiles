@@ -74,6 +74,7 @@
 	"ignored_packages":
 	[
 		"Flow",
+		"Six",
 		"Vintage"
 	],
 	"indent_guide_options":
