@@ -45,3 +45,5 @@
 	required = true
 [commit]
 	template = /Users/nekron/.stCommitMsg
+[rerere]
+	enabled = true
