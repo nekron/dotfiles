@@ -1,0 +1,9 @@
+<snippet>
+  <content><![CDATA[
+IO.inspect("---------------=============== ${1:content} ===============---------------")
+IO.inspect(${2:var})
+IO.inspect("---------------=============== ${1:content} ===============---------------")
+]]></content>
+  <tabTrigger>iii</tabTrigger>
+  <scope>source.elixir</scope>
+</snippet>
