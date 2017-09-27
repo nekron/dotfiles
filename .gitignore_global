@@ -6,3 +6,4 @@ db/openid-store
 .rebar
 hub.yml
 log
+*.ignore.*
