@@ -65,8 +65,7 @@
 		".tmp",
 		"db/cstore",
 		".eunit",
-		"_build",
-		"priv/static"
+		"_build"
 	],
 	"font_size": 17,
 	"highlight_line": false,
@@ -74,7 +73,9 @@
 	"ignored_packages":
 	[
 		"Flow",
+		"Git",
 		"Six",
+		"sublime-github",
 		"Vintage"
 	],
 	"indent_guide_options":
