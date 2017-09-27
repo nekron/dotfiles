@@ -73,9 +73,7 @@
 	"ignored_packages":
 	[
 		"Flow",
-		"Git",
 		"Six",
-		"sublime-github",
 		"Vintage"
 	],
 	"indent_guide_options":
