@@ -110,9 +110,9 @@ alias pull='git pull && bundle install && rake db:migrate db:test:prepare'
 alias git='hub'
 #alias rm='trash'
 
-source /usr/local/share/chruby/chruby.sh
-source /usr/local/share/chruby/auto.sh
-chruby ruby-2.3.1
+#source /usr/local/share/chruby/chruby.sh
+#source /usr/local/share/chruby/auto.sh
+#chruby ruby-2.3.1
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 # JDK switch
@@ -140,3 +140,6 @@ fi
 if [ -f /Users/nekron/Downloads/google-cloud-sdk/completion.zsh.inc ]; then
   source '/Users/nekron/Downloads/google-cloud-sdk/completion.zsh.inc'
 fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
