@@ -114,22 +114,22 @@ alias git='hub'
 #source /usr/local/share/chruby/auto.sh
 #chruby ruby-2.3.1
 
-export JAVA_HOME=$(/usr/libexec/java_home)
+#export JAVA_HOME=$(/usr/libexec/java_home)
 # JDK switch
-function setjdk() {
-  if [ $# -ne 0 ]; then
-   removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'
-   if [ -n "${JAVA_HOME+x}" ]; then
-    removeFromPath $JAVA_HOME
-   fi
-   export JAVA_HOME=`/usr/libexec/java_home -v $@`
-   export PATH=$JAVA_HOME/bin:$PATH
-  fi
- }
- function removeFromPath() {
-  export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
- }
-setjdk 1.8
+#function setjdk() {
+  #if [ $# -ne 0 ]; then
+   #removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'
+   #if [ -n "${JAVA_HOME+x}" ]; then
+    #removeFromPath $JAVA_HOME
+   #fi
+   #export JAVA_HOME=`/usr/libexec/java_home -v $@`
+   #export PATH=$JAVA_HOME/bin:$PATH
+  #fi
+ #}
+ #function removeFromPath() {
+  #export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
+ #}
+#setjdk 1.8
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f /Users/nekron/Downloads/google-cloud-sdk/path.zsh.inc ]; then
