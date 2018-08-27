@@ -1,8 +1,9 @@
 [user]
-	name = Mariano Abel Coca
+	name = Mariano Coca
 	email = marianoabelcoca@gmail.com
 [core]
 	excludesfile = /Users/nekron/.gitignore_global
+	editor = vim
 [merge]
   tool = extMerge
 [alias]
@@ -31,9 +32,9 @@
   cmd ="extMerge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\""
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path =
+	path = 
 [mergetool "sourcetree"]
-	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [filter "media"]
 	required = true
@@ -44,7 +45,9 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
-[commit]
-	template = ~/.commitmessage
+;[commit]
+  ;template = ~/.commitmessage
 [rerere]
 	enabled = true
+[commit]
+	template = /Users/nekron/.stCommitMsg
