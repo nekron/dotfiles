@@ -144,7 +144,7 @@ if has("gui_running")
   set lines=79
   set columns=269
   set guifont=Monaco:h14
-  let rdark_current_line = 1
+  "let rdark_current_line = 1
   set guioptions-=T
   set guioptions-=m
   "colorscheme zenburn
@@ -161,8 +161,8 @@ else
   "colorscheme 256-grayvim
   "colorscheme mac_classic
   "colorscheme Tomorrow-Night
-  colorscheme Tomorrow-Night-Eighties
-  "colorscheme atom-dark-256
+  "colorscheme Tomorrow-Night-Eighties
+  colorscheme atom-dark-256
   "set background=light
   set background=dark
   set cursorline
