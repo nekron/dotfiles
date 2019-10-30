@@ -20,7 +20,7 @@
 	],
 	"bold_folder_labels": true,
 	"close_windows_when_empty": true,
-	"color_scheme": "Packages/Base16 Color Schemes/Themes/base16-gruvbox-light-hard.tmTheme",
+	"color_scheme": "Packages/Base16 Color Schemes/Themes/base16-gruvbox-dark-pale.tmTheme",
 	"create_window_at_startup": false,
 	"detect_indentation": false,
 	"enable_tab_scrolling": false,
