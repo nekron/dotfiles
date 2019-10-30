@@ -108,28 +108,33 @@ alias asterisk='/usr/local/asterisk/sbin/asterisk -c'
 alias die='pkill -9 -fi'
 alias pull='git pull && bundle install && rake db:migrate db:test:prepare'
 alias git='hub'
+alias sshu='ssh -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 #alias rm='trash'
 
 #source /usr/local/share/chruby/chruby.sh
 #source /usr/local/share/chruby/auto.sh
 #chruby ruby-2.3.1
 
-#export JAVA_HOME=$(/usr/libexec/java_home)
+# export JAVA_HOME=$(/usr/libexec/java_home)
 # JDK switch
-#function setjdk() {
-  #if [ $# -ne 0 ]; then
-   #removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'
-   #if [ -n "${JAVA_HOME+x}" ]; then
-    #removeFromPath $JAVA_HOME
-   #fi
-   #export JAVA_HOME=`/usr/libexec/java_home -v $@`
-   #export PATH=$JAVA_HOME/bin:$PATH
-  #fi
- #}
- #function removeFromPath() {
-  #export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
- #}
-#setjdk 1.8
+# function setjdk() {
+#   if [ $# -ne 0 ]; then
+#    removeFromPath '/System/Library/Frameworks/JavaVM.framework/Home/bin'
+#    if [ -n "${JAVA_HOME+x}" ]; then
+#     removeFromPath $JAVA_HOME
+#    fi
+#    export JAVA_HOME=`/usr/libexec/java_home -v $@`
+#    export PATH=$JAVA_HOME/bin:$PATH
+#   fi
+#  }
+#  function removeFromPath() {
+#   export PATH=$(echo $PATH | sed -E -e "s;:$1;;" -e "s;$1:?;;")
+#  }
+# setjdk 1.8
+
+# brew install jenv
+export PATH="$HOME/.jenv/bin:$PATH"
+eval "$(jenv init -)"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f /Users/nekron/Downloads/google-cloud-sdk/path.zsh.inc ]; then
@@ -143,3 +148,14 @@ fi
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+#export HOMEBREW_NO_AUTO_UPDATE=1
+export HOMEBREW_AUTO_UPDATE_SECS=86400
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+export ANDROID_HOME=$HOME/Library/Android/sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
