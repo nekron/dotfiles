@@ -1,3 +1,5 @@
+[[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
+
 export PATH=$PATH:/usr/local/share/npm/bin #Added npm path for node.js
 export PATH=$PATH:/usr/local/Cellar/nimrod/0.9.2/libexec/bin #Added path for nimrod
 export PATH=$PATH:/Users/nekron/Projects/fruits/moai-sdk-1.4p0/bin/osx #Added path for moai

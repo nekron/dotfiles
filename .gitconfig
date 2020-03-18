@@ -2,7 +2,7 @@
 	name = Mariano Coca
 	email = marianoabelcoca@gmail.com
 [core]
-	excludesfile = /Users/nekron/.gitignore_global
+	excludesfile = ~/.gitignore_global
 	editor = vim
 [merge]
   tool = extMerge
@@ -50,4 +50,5 @@
 [rerere]
 	enabled = true
 [commit]
-	template = /Users/nekron/.stCommitMsg
+	template = ~/.stCommitMsg
+
