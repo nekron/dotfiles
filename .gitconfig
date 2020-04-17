@@ -1,5 +1,5 @@
 [user]
-	name = Mariano Coca
+	name = Mariano Abel Coca
 	email = marianoabelcoca@gmail.com
 [core]
 	excludesfile = ~/.gitignore_global
@@ -11,8 +11,8 @@
   ci = commit
   st = status
   br = branch
-  hist ="log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short" ; --all para listar todos los branches
-  logg = "log --graph --oneline" ; --all para listar todos los branches
+  hist ="log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short" ; --all to list all branches
+  logg = "log --graph --oneline" ; --all to list all branches
   f = fetch
   diffs = diff --staged
   logr = log --reverse
@@ -51,4 +51,3 @@
 	enabled = true
 [commit]
 	template = ~/.stCommitMsg
-

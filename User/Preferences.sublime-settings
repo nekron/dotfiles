@@ -16,8 +16,11 @@
 		"*.jar",
 		"*.zip",
 		"*.doc",
-		"*.docx"
+		"*.docx",
+		"node_modules/**",
+		"bower_components/**"
 	],
+  "drag_text": false,
 	"bold_folder_labels": true,
 	"close_windows_when_empty": true,
 	"color_scheme": "Packages/Base16 Color Schemes/Themes/base16-gruvbox-dark-pale.tmTheme",
@@ -59,10 +62,9 @@
 		"target",
 		"priv/static/js",
 		"tmp",
-		"bower_components",
-		"node_modules",
 		"deps",
 		"dist",
+		"build",
 		"Pods",
 		"es",
 		"umd",
@@ -74,7 +76,8 @@
 		".bundle",
 		"db/cstore",
 		".eunit",
-		"_build"
+		"_build",
+    "_site"
 	],
 	"font_size": 20,
 	"highlight_line": false,

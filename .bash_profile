@@ -2,7 +2,6 @@
 
 export PATH=$PATH:/usr/local/share/npm/bin #Added npm path for node.js
 export PATH=$PATH:/usr/local/Cellar/nimrod/0.9.2/libexec/bin #Added path for nimrod
-export PATH=$PATH:/Users/nekron/Projects/fruits/moai-sdk-1.4p0/bin/osx #Added path for moai
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 export PATH=$PATH:.mame #added path for MAME!
 export MANPATH=/usr/local/opt/erlang/lib/erlang/man:$MANPATH
