@@ -178,8 +178,13 @@ export PATH=$PATH:$ANDROID_HOME/tools
 export PATH=$PATH:$ANDROID_HOME/tools/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
+export PATH=$PATH:$HOME/Library/Python/3.7/bin
+export GOPATH="$HOME/go"
+export GOROOT="$(brew --prefix go@1.16)/libexec"
+export PATH="${GOPATH}/bin:${GOROOT}/bin:$PATH"
 # added by travis gem
 [ -f /Users/mac/.travis/travis.sh ] && source /Users/mac/.travis/travis.sh
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
