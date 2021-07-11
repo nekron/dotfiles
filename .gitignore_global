@@ -8,3 +8,6 @@ hub.yml
 log
 *.ignore.*
 .vscode
+.idea
+jsconfig.json
+
