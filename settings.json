@@ -1,0 +1,61 @@
+{
+    "editor.tabSize": 2,
+    "explorer.confirmDelete": false,
+    "javascript.format.enable": false,
+    "editor.tabCompletion": "on",
+    "git.autofetch": true,
+    "window.title": "${activeEditorLong}${separator}${appName}",
+    "workbench.editor.enablePreviewFromQuickOpen": true,
+    "editor.minimap.enabled": false,
+    "javascript.preferences.importModuleSpecifier": "relative",
+    "window.zoomLevel": 1,
+    "editor.suggestSelection": "first",
+    "workbench.startupEditor": "newUntitledFile",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "editor.formatOnSave": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "terminal.integrated.rendererType": "dom",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.colorTheme": "Monokai",
+    "explorer.confirmDragAndDrop": false,
+    "html.format.maxPreserveNewLines": 1,
+    "editor.codeActionsOnSave": {
+        "source.fixAll": true
+    },
+    "diffEditor.ignoreTrimWhitespace": false,
+    "eslint.validate": [
+        "javascript",
+        "javascriptreact"
+    ],
+    "kite.showWelcomeNotificationOnStartup": false,
+    "terminal.integrated.shell.osx": "/bin/zsh",
+    "grammarly.userWords": [
+        "docsify"
+    ],
+    "js/ts.implicitProjectConfig.strictFunctionTypes": false,
+    "typescript.check.npmIsInstalled": false,
+    "[json]": {
+        "editor.quickSuggestions": {
+            "strings": true
+        },
+        "editor.suggest.insertMode": "replace",
+        "gitlens.codeLens.scopes": [
+            "document"
+        ]
+    },
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.enablePreviewFromCodeNavigation": true,
+    "files.associations": {
+        ".env.development": "env",
+        ".env.production": "env"
+    },
+    "settingsSync.ignoredSettings": [
+    
+    ],
+}
+
